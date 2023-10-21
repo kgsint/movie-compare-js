@@ -9,3 +9,5 @@ const debounce = (fn, delay = 1000) => {
         tiemoutId = setTimeout(() => fn.apply(null, args), delay)
     }
 }
+
+export { debounce }

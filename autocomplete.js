@@ -1,4 +1,6 @@
-const createAutocomplete = ({ root, renderOption, onOptionSelect, inputValue, fetchData }) => {
+import { debounce } from './utils.js'
+
+export const createAutocomplete = ({ root, renderOption, onOptionSelect, inputValue, fetchData }) => {
     root.innerHTML = `
         <label><b>Search for movie</b></label>
         <input type="text" class="input" id="search-input" />

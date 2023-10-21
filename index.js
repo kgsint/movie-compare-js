@@ -1,3 +1,5 @@
+import { createAutocomplete } from "./autocomplete.js"
+
 const autocompleteConfig = {
     renderOption(movie) {
         const title = movie.Title
@@ -28,6 +30,7 @@ const autocompleteConfig = {
 
 }
 
+// left search bar
 createAutocomplete({
     root: document.querySelector('#left-autocomplete'),
     onOptionSelect(movie) {
@@ -37,6 +40,7 @@ createAutocomplete({
     ...autocompleteConfig
 })
 
+// right searchbar
 createAutocomplete({
     root: document.querySelector('#right-autocomplete'),
     onOptionSelect(movie) {
